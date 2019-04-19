@@ -29,13 +29,22 @@
      	
      	int result = stmt.executeUpdate();
      	
-     	if(result > 0)
-     		
-     		out.println("회원가입이 성공적으로 처리되셨습니다.");
-     	
-     	else
-     		out.println("회원가입을 실패하셨습니다.");
-     	
+     	if(result > 0){
+     		%>
+     		<script>
+     			alert("회원가입 성공");
+     			location="login.jsp";
+     		</script>
+     		<%
+     	}
+     		else{
+     			%>
+     				<script>
+     					alert("회원가입 실패");
+     					history.back();
+     				</script>
+     			<%
+     		}
      } catch(ClassNotFoundException e){
      	e.printStackTrace();
      } catch(SQLException e){
