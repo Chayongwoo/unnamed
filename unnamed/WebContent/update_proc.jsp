@@ -53,11 +53,11 @@
 		stmt.setInt(4, boardnum);
 		int result = stmt.executeUpdate(); // 성공 : 1이상인 정수가 나옴, 실패하면 0
 		
-		if(result <=0){
-			%>
+		if(result > 0){
+		%>
 			<script type="text/javascript">
-			alert("수정실패");
-			history.back();		
+			alert("수정성공");
+			location="view.jsp?boardno=<%=boardnum%>";		
 			</script>
 		<%
 		}

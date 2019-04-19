@@ -14,14 +14,13 @@
 				DBManager db = DBManager.getInstance();
 				Connection con = db.open();
 
-				String sql = "select USERid from unmember where USERid = ?";
+				String sql = "select userid from unmember where userid = ?";
 
 				PreparedStatement stmt = con.prepareStatement(sql);
 				stmt.setString(1, id);
 				ResultSet rs = stmt.executeQuery();
 				if(rs.next()){
-					String userid = rs.getString("USERid");
-					out.println("중복된 아이디 있음");
+					out.println("아이디 중복");
 				}
 				
 				else {

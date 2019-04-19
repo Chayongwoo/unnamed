@@ -98,10 +98,7 @@
 		<td><%=repcontent%></td>
 		<td><%=repuserid%></td>
 	</tr>
-
 	<tr>
-	
-	
 	<%
 				}
 	
@@ -125,19 +122,19 @@
 					if (i % 10 == 1 && i > 1) {
 		%>
 		<td>
-	<a href="view.jsp?page=<%=i - 1%>">Previous</a>
+	<a href="view.jsp?page=<%=i - 1%>&boardno=<%=boardno%>">Previous</a>
 	</td>
 	<%
 					}
 		%>
 	<td>
-	<a href="list.jsp?page=<%=i%>"><%=i%></a>
+	<a href="view.jsp?page=<%=i%>&boardno=<%=boardno%>"><%=i%></a>
 	</td>
 	<%
 					if (i % 10 == 0) {
 		%>
 	<td>
-	<a href="list.jsp?page=<%=i + 1%>">Next</a>
+	<a href="view.jsp?page=<%=i + 1%>&boardno=<%=boardno%>">Next</a>
 	</td>
 	<%
 					}

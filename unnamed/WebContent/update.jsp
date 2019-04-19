@@ -5,8 +5,16 @@
 <%@page import="java.sql.SQLException"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-    
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+function check(){
+	var title = $("input[name='title']").val();
+	if(title==""){
+		alert("제목을 입력해주세요.");
+		return false;
+	}
+}
+</script>    
     <%
     	int boardnum = Integer.parseInt(request.getParameter("boardno"));
     
@@ -33,7 +41,7 @@
 			String header = rs.getString("header");
 			String filename = rs.getString("filename");
 		%>
-    		<form method="post" action="update_proc.jsp" enctype="multipart/form-data">
+    		<form method="post" action="update_proc.jsp" onsubmit="return check()" enctype="multipart/form-data">
     			<select name="header">
     			<% 
     				while(rs2.next()){

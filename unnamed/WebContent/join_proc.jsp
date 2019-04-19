@@ -30,6 +30,7 @@
      	int result = stmt.executeUpdate();
      	
      	if(result > 0)
+     		
      		out.println("회원가입이 성공적으로 처리되셨습니다.");
      	
      	else

@@ -5,12 +5,13 @@
 <script type="text/javascript">
 
 var isPass = false;
+
 function idCheck(){
 	
 	$.ajax({
 		url : 'idCheck.jsp',
 		type : 'get',
-		data : {"userid" : $('input[name=id]').val()},
+		data : {"userid" : $('input[name=userid]').val()},
 		success : function(result){
 			result = result.trim();
 			if(result == '사용 가능') {
@@ -18,12 +19,10 @@ function idCheck(){
 			} else {
 				isPass = false;
 			}
+			
 			alert(result);
 			
-		},
-		fail: function(error) {
-		   alert("오류 발생"); 
-		  }
+		}
 	});
 }
 
