@@ -95,30 +95,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   
   <!-- First Photo Grid-->
 
-  <table>
-      <thead>
-        <tr>
-          <th>Lorem</th><th>Ipsum</th><th>Dolor</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
-        </tr>
-        <tr>
-          <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
-        </tr>
-        <tr>
-          <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
-        </tr>
-        <tr>
-          <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
-        </tr>
-        <tr>
-          <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
-        </tr>
-      </tbody>
-    </table>
+ 
 
 
   <!-- Pagination --> 
